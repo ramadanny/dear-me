@@ -1,10 +1,14 @@
-# 🌟 Dear Me: 30 Days Self Growth Challenge
+<div align="center">
+  <h1>🌟 Dear Me: 30 Days Self Growth Challenge</h1>
+  
+<img src="https://cdn.jsdelivr.net/gh/ramadanny/cdn@main/955kszq7x6y94f9y.png" alt="Header Image" width="100%"/>
 
 ![Project Status](https://img.shields.io/badge/Status-Active-success)
 ![React](https://img.shields.io/badge/React-19.0-blue)
 ![Vite](https://img.shields.io/badge/Vite-6.0-purple)
 ![Firebase](https://img.shields.io/badge/Firebase-12.0-orange)
 ![Gemini AI](https://img.shields.io/badge/AI-Google_Gemini-008744)
+</div>
 
 ---
 
