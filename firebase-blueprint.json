@@ -1,0 +1,54 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile data",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "username": { "type": "string" },
+        "age": { "type": "number" },
+        "height": { "type": "number" },
+        "weight": { "type": "number" },
+        "gender": { "type": "string" },
+        "submitTotal": { "type": "number" },
+        "dateFirstLogin": { "type": "number" },
+        "dateLastLogin": { "type": "number" }
+      },
+      "required": ["username"]
+    },
+    "BmiData": {
+      "title": "Bmi Data",
+      "description": "Historical BMI results for a user",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "date": { "type": "number" },
+        "age": { "type": "number" },
+        "height": { "type": "number" },
+        "weight": { "type": "number" },
+        "gender": { "type": "string" },
+        "activity": { "type": "number" },
+        "imt": { "type": "string" },
+        "stDeviasi": { "type": "string" },
+        "zScore": { "type": "string" },
+        "bbNormalMin": { "type": "string" },
+        "bbNormalMax": { "type": "string" },
+        "bmr": { "type": "string" },
+        "tee": { "type": "string" },
+        "aiSuggestionText": { "type": "string" }
+      },
+      "required": ["userId", "date", "age", "height", "weight", "gender", "activity", "imt", "aiSuggestionText"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User profiles, keyed by uid"
+    },
+    "/users/{userId}/bmi_data/{bmiId}": {
+      "schema": { "$ref": "#/entities/BmiData" },
+      "description": "BMI calculations history"
+    }
+  }
+}
